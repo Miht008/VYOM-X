@@ -1,2 +1,0 @@
-# VYOM
-project for hackathon
