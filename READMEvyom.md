@@ -1,4 +1,11 @@
-![VYOM-X Header](https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=200&section=header&text=VYOM-X&fontSize=80&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=AI-Powered%20Financial%20Transaction%20Intelligence%20%26%20Voucher%20Classification&descAlignY=60&descSize=18)
+<div align="center">
+
+# 🚀 VYOM-X
+
+### **AI-Powered Financial Transaction Intelligence & Voucher Classification**
+
+**Structured Transactions → Contextual AI Reasoning → Validated Voucher Classification**
+![](https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=200&section=header&text=VYOM-X&fontSize=80&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=AI-Powered%20Financial%20Transaction%20Intelligence%20%26%20Voucher%20Classification&descAlignY=60&descSize=18)
 
 ![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=36BCF7&center=true&vCenter=true&width=700&lines=Structured+Transactions+%E2%86%92+Accounting+Vouchers;Context-Aware+Classification+with+Gemma+4;Grounded+Reasoning+%2B+Rule-Based+Validation;Confidence-Aware+%C2%B7+Ambiguity-Safe+%C2%B7+Explainable)
 
@@ -11,19 +18,21 @@
 
 🏆 **Hacktoberfest Hack Day Nagpur × Elevate IIITN** ・ 📌 **Problem Statement #4 — VYOM+ Intelligent Voucher Classification Using Open-Source LLMs**
 
+</div>
+
 ---
 
 ## 👥 Team
 
 | Role | Name | GitHub |
 | :--- | :--- | :--- |
-| 🏷️ Team Name | **[YOUR TEAM NAME]** | — |
-| 👤 Member 1 | [Name] | [@username] |
-| 👤 Member 2 | [Name] | [@username] |
-| 👤 Member 3 | [Name] | [@username] |
-| 👤 Member 4 | [Name] | [@username] |
+| 🏷️ Team Name | **404 : Team Not Found** |https://github.com/Miht008/VYOM |
+| 👤 Member 1 | Mihit Bide | Miht008 |
+| 👤 Member 2 | Nitinraj Tiwari | Nitin0-Jade |
+| 👤 Member 3 | Sahil Kate | SahilKirankate |
+| 👤 Member 4 | Akshat Sharma | Akshat-dev12 |
 
-📞 **Contact:** [phone number of any one member]
+📞 **Contact:** +91 9699656154
 
 ---
 
@@ -729,4 +738,4 @@ This project will be released under the **MIT License** upon final implementatio
 **🏆 Hacktoberfest Hack Day Nagpur × Elevate IIITN**
 *Problem Statement #4 — VYOM+ Intelligent Voucher Classification Using Open-Source LLMs*
 
-**Made with 💙 by [YOUR TEAM NAME]**
+**Made with 💙 by 404 : Team Not Found**
