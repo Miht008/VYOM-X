@@ -51,6 +51,19 @@
 
 ---
 
+## ⚡ VYOM-X AT A GLANCE
+
+| 🧠 Intelligence | 📚 Knowledge | 🛡️ Reliability | 📦 Output |
+|---|---|---|---|
+| Gemma 4 | Accounting Grounding | Validation + Confidence | JSON / Excel |
+| Context Reasoning | Voucher Taxonomy | Ambiguity Detection | Batch Processing |
+| Multi-field Analysis | Decision Cues | Human Review | API Ready |
+
+> 🎯 **Core Idea:** Don't classify the transaction by what words it contains.  
+> **Understand what the transaction actually represents.**
+
+---
+
 ## 💡 Why VYOM-X?
 
 Accounting transaction classification is **not** a keyword-matching problem.
@@ -66,6 +79,24 @@ Instead, VYOM-X builds a **controlled classification pipeline** in which AI reas
 **🧹 Preprocessing → 🧠 LLM Reasoning → 📚 Knowledge Grounding → ✅ Validation → 📊 Confidence → 🔍 Ambiguity Detection → 📦 Structured Output**
 
 ---
+
+### 🔄 What VYOM-X Does
+
+```text
+📊 Structured Transaction
+          ↓
+🧠 Contextual Understanding
+          ↓
+📚 Accounting Knowledge
+          ↓
+🤖 Gemma 4 Reasoning
+          ↓
+🛡️ Validation
+          ↓
+📊 Confidence
+          ↓
+📦 Voucher Classification
+```
 
 ## 🎯 Problem Statement
 
@@ -162,6 +193,8 @@ Instead of forcing every uncertain transaction into an apparently certain answer
 **Stage 7 — 📦 Structured Output**
 Every record produces a consistent, machine-readable result suitable for programmatic evaluation.
 
+**Overall Objective 🎯** Build a reliable, explainable and open-source voucher classification pipeline that can operate on real-world financial transaction data.
+
 ---
 
 ## 🔬 Worked Example — A Hard Case
@@ -247,6 +280,17 @@ VYOM-X uses **Gemma 4** (open-weight) as its primary AI reasoning component.
 - 🎯 Producing constrained voucher classifications
 - 📝 Providing short, evidence-based rationales
 
+### 🧠 Why VYOM-X Needs an LLM
+
+| ❌ Keyword Matching | ✅ VYOM-X |
+|---|---|
+| `"invoice"` → guess | Invoice + party + items + financial context |
+| `"payment"` → guess | Payment + accounts + transaction relationship |
+| `"return"` → guess | Return + original document + goods movement |
+| One field at a time | Full transaction context |
+
+> 🤖 **Gemma 4 handles semantic reasoning. The surrounding system handles control, validation and decision-making.**
+
 The model is **not** treated as an unrestricted chatbot — it operates as a controlled classification component inside a larger engineering pipeline.
 
 ### 💭 Why open-weight AI?
@@ -292,6 +336,22 @@ VYOM-X closes this gap with a compact, curated **voucher knowledge base** — on
   "confusable_with": ["Payment", "Receipt"],
   "distinguishing_test": "Is money moving between the entity's OWN accounts with no external party?"
 }
+```
+
+### 🎯 Grounding Strategy
+
+```text
+Transaction Context
+        +
+Voucher Definitions
+        +
+Decision Cues
+        ↓
+   🤖 Gemma 4
+        ↓
+Classification
+        +
+Evidence
 ```
 
 Each classification prompt receives the transaction context **plus the definitions of the most plausible candidate categories** (selected by lightweight field-signal matching), so Gemma 4 performs *grounded discrimination*:
@@ -417,6 +477,26 @@ This is retrieval-grounded classification kept deliberately simple: a static, ve
 }
 ```
 
+## 🤖 Agentic Workflow
+
+```text
+Transaction
+    ↓
+🧠 Context Construction
+    ↓
+📚 Knowledge Retrieval
+    ↓
+🤖 Gemma 4
+    ↓
+🛡️ Validation
+    ↓
+📊 Confidence
+    ↓
+✅ Auto-Classification
+      OR
+⚠️ Human Review
+```
+
 The rationale is a **short evidence-based explanation**, not unrestricted model reasoning.
 
 ---
@@ -474,14 +554,60 @@ The auto-classify / human-review **threshold is calibrated on held-out data** �
 
 ---
 
+## ✨ Expected Features
+
+| 🚀 Feature | 🎯 Purpose |
+|---|---|
+| 📥 Excel Ingestion | Process structured transaction datasets |
+| 🧹 Data Normalization | Clean and standardize transaction fields |
+| 🧠 Contextual Understanding | Understand relationships between fields |
+| 📚 Knowledge Grounding | Supply accounting definitions and cues |
+| 🤖 Gemma 4 Classification | Perform semantic voucher classification |
+| 🛡️ Validation | Detect logically inconsistent predictions |
+| 📊 Confidence Scoring | Measure prediction reliability |
+| ⚠️ Ambiguity Detection | Route uncertain cases for review |
+| 👨‍💼 Human Review | Prevent forced low-confidence decisions |
+| 📦 JSON / Excel Output | Produce machine-readable results |
+| 📈 Evaluation | Measure Accuracy, Precision, Recall and F1 |
+
+---
+
+## 🧭 Implementation Approach
+
+### 🛠️ Development Flow
+
+```text
+📥 Ingest
+   ↓
+🧹 Clean
+   ↓
+🔄 Normalize
+   ↓
+🧠 Build Context
+   ↓
+📚 Ground
+   ↓
+🤖 Classify
+   ↓
+🛡️ Validate
+   ↓
+📊 Score
+   ↓
+📦 Export
+```
+
+---
+
 ## 📦 Expected Output
 
 **Minimum:**
 
+### ✅ Example Result
 ```json
 { "transaction_id": "TXN-1024", "voucher_type": "Purchase" }
 ```
 
+### 📊 Extended Result
 **Extended:**
 
 ```json
@@ -494,6 +620,7 @@ The auto-classify / human-review **threshold is calibrated on held-out data** �
 }
 ```
 
+### 📑 Batch Classification
 **Batch view:**
 
 ```text
@@ -564,6 +691,37 @@ The separation of input processing, knowledge grounding, AI reasoning, validatio
 - 🤝 **Machine-readable** accounting outputs
 - 🌉 A working **bridge between invoice extraction and automated voucher creation**
 - 💡 A concrete demonstration that open-source AI can power financial-data workflows **with software-level control over AI output**
+
+---
+
+### 🛣️ VYOM-X Evolution
+
+```text
+Current
+  ↓
+Voucher Classification
+  ↓
+Invoice Understanding
+  ↓
+Automated Voucher Creation
+  ↓
+ERP Integration
+  ↓
+Financial Intelligence Layer
+```
+
+---
+
+## 🌍 Expected Impact
+
+| 🌍 Impact | 💡 Benefit |
+|---|---|
+| ⏱️ Less manual work | Faster transaction classification |
+| ⚡ Higher consistency | Standardized classification decisions |
+| 🧭 Better ambiguity handling | Uncertain records can be reviewed |
+| 🤝 Structured outputs | Easier downstream automation |
+| 🔗 ERP readiness | Future accounting-system integration |
+| 🔓 Open-source AI | Reduced dependence on proprietary APIs |
 
 ---
 
