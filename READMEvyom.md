@@ -29,6 +29,7 @@
 
 ## 📑 Table of Contents
 
+- [⚡ VYOM-X At a Glance](#-vyom-x-at-a-glance)
 - [💡 Why VYOM-X?](#-why-vyom-x)
 - [🎯 Problem Statement](#-problem-statement)
 - [🧩 Proposed Solution — Core Pipeline](#-proposed-solution--core-pipeline)
@@ -40,9 +41,12 @@
 - [📚 Accounting Knowledge Grounding](#-accounting-knowledge-grounding)
 - [🏗️ System Architecture](#️-system-architecture)
 - [🔄 Data & Information Flow](#-data--information-flow)
+- [🤖 Agentic Workflow](#-agentic-workflow)
 - [📊 Confidence Estimation](#-confidence-estimation)
 - [✨ What Makes VYOM-X Different](#-what-makes-vyom-x-different)
 - [🛠️ Technology Stack](#️-technology-stack)
+- [✨ Expected Features](#-expected-features)
+- [🧭 Implementation Approach](#-implementation-approach)
 - [📦 Expected Output](#-expected-output)
 - [⚠️ Challenges & Mitigations](#️-challenges--mitigations)
 - [🚀 Future Scope & Scalability](#-future-scope--scalability)
@@ -680,17 +684,6 @@ Accounting / ERP System
 - ☁️ Deployment as an internal financial-data service
 
 The separation of input processing, knowledge grounding, AI reasoning, validation, and output means each component can be upgraded **independently**.
-
----
-
-## 🌍 Expected Impact
-
-- ⏱️ **Reduced manual effort** in transaction classification
-- ⚡ **Faster, more consistent** transaction processing
-- 🧭 **Principled handling** of ambiguous financial records
-- 🤝 **Machine-readable** accounting outputs
-- 🌉 A working **bridge between invoice extraction and automated voucher creation**
-- 💡 A concrete demonstration that open-source AI can power financial-data workflows **with software-level control over AI output**
 
 ---
 
