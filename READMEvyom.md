@@ -50,6 +50,7 @@
 - [🧠 AI's Role in the System](#-ais-role-in-the-system)
 - [📚 Accounting Knowledge Grounding](#-accounting-knowledge-grounding)
 - [🏗️ System Architecture](#️-system-architecture)
+- [🧱 Component-Level Architecture](#-component-level-architecture)
 - [🔄 Data & Information Flow](#-data--information-flow)
 - [🤖 Agentic Workflow](#-agentic-workflow)
 - [📊 Confidence Estimation](#-confidence-estimation)
@@ -62,6 +63,7 @@
 - [⚠️ Challenges & Mitigations](#️-challenges--mitigations)
 - [🚀 Future Scope & Scalability](#-future-scope--scalability)
 - [🌍 Expected Impact](#-expected-impact)
+- [🤝 Contributions](#-contributions)
 - [📄 License](#-license)
 
 ---
@@ -466,6 +468,25 @@ This is retrieval-grounded classification kept deliberately simple: a static, ve
 
 ---
 
+## 🧱 Component-Level Architecture
+
+| 🧩 Component | 🎯 Responsibility | 🔌 Input | 📤 Output |
+|---|---|---|---|
+| 📥 Data Ingestion | Reads and parses the supplied transaction dataset | Excel / tabular data | Raw transaction rows |
+| 🧹 Validation & Cleaning | Checks required fields, missing values, data types and basic consistency | Raw rows | Clean transaction records |
+| 🔄 Normalization | Standardizes field formats while preserving transaction relationships | Clean records | Normalized transaction schema |
+| 🧠 Context Builder | Converts structured records into accounting-focused semantic context | Normalized records | Transaction context |
+| 📚 Voucher Knowledge Base | Stores category definitions, decision cues and confusable categories | Voucher taxonomy | Grounding context |
+| 🤖 Gemma 4 | Performs contextual semantic reasoning and classification | Transaction context + grounding | Candidate voucher + evidence |
+| 🛡️ Validation Engine | Checks predictions against deterministic rules and transaction evidence | Prediction + transaction | Validation result / flags |
+| 📊 Confidence Layer | Combines measurable signals to estimate prediction reliability | Model + validation signals | Confidence score + review flag |
+| ⚖️ Decision Engine | Determines whether to auto-classify or request human review | Prediction + confidence | Final decision |
+| 📦 Output Engine | Produces consistent machine-readable results | Final decision | JSON / Excel |
+
+> 🧭 **Design principle:** Each component has a clearly defined responsibility, allowing preprocessing, knowledge, AI reasoning, validation, and output handling to evolve independently.
+
+---
+
 ## 🔄 Data & Information Flow
 
 ```text
@@ -758,6 +779,41 @@ Financial Intelligence Layer
 | 🤝 Structured outputs | Easier downstream automation |
 | 🔗 ERP readiness | Future accounting-system integration |
 | 🔓 Open-source AI | Reduced dependence on proprietary APIs |
+
+---
+
+## 🤝 Contributions
+
+VYOM-X is intended to remain an open and extensible project.
+
+Contributions are welcome in areas such as:
+
+| 🛠️ Area | 💡 Examples |
+|---|---|
+| 🧠 AI & Models | Model evaluation, prompt improvements, fine-tuning experiments |
+| 📚 Accounting Knowledge | Voucher definitions, decision cues, edge cases |
+| 🔧 Backend | API improvements, validation logic, processing pipelines |
+| 🖥️ Interface | Streamlit UI improvements and usability enhancements |
+| 🧪 Evaluation | New test cases, benchmarks and error analysis |
+| 📖 Documentation | Tutorials, examples and technical documentation |
+
+### 🚀 Contribution Workflow
+
+```text
+Fork the Repository
+        ↓
+Create a Feature Branch
+        ↓
+Make Your Changes
+        ↓
+Test & Validate
+        ↓
+Open a Pull Request
+        ↓
+Review & Discussion
+        ↓
+Merge
+```
 
 ---
 
