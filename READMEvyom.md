@@ -39,6 +39,7 @@
 ## 📑 Table of Contents
 
 - [⚡ VYOM-X At a Glance](#-vyom-x-at-a-glance)
+- [🎯 Objectives](#-objectives)
 - [💡 Why VYOM-X?](#-why-vyom-x)
 - [🎯 Problem Statement](#-problem-statement)
 - [🧩 Proposed Solution — Core Pipeline](#-proposed-solution--core-pipeline)
@@ -56,6 +57,7 @@
 - [🛠️ Technology Stack](#️-technology-stack)
 - [✨ Expected Features](#-expected-features)
 - [🧭 Implementation Approach](#-implementation-approach)
+- [📦 Open-Source Dependencies & Components](#-open-source-dependencies--components)
 - [📦 Expected Output](#-expected-output)
 - [⚠️ Challenges & Mitigations](#️-challenges--mitigations)
 - [🚀 Future Scope & Scalability](#-future-scope--scalability)
@@ -74,6 +76,21 @@
 
 > 🎯 **Core Idea:** Don't classify the transaction by what words it contains.  
 > **Understand what the transaction actually represents.**
+
+---
+
+## 🎯 Objectives
+
+| 🎯 Objective | 💡 Purpose |
+|---|---|
+| 🧠 Contextual Classification | Understand complete transaction context instead of relying on keywords |
+| 🤖 Meaningful AI Integration | Use Gemma 4 for semantic reasoning across multiple transaction fields |
+| 📚 Accounting Grounding | Provide voucher definitions and decision cues to guide classification |
+| 🛡️ Reliable Decisions | Validate AI predictions using deterministic rules and transaction evidence |
+| 📊 Confidence Awareness | Measure prediction reliability and identify uncertain cases |
+| ⚠️ Ambiguity Handling | Route low-confidence or incomplete transactions for human review |
+| 📦 Structured Output | Produce consistent JSON / Excel results for evaluation and downstream systems |
+| 🚀 Future Scalability | Keep the architecture modular for ERP integration and future AI improvements |
 
 ---
 
@@ -608,6 +625,23 @@ The auto-classify / human-review **threshold is calibrated on held-out data** �
    ↓
 📦 Export
 ```
+
+---
+
+## 📦 Open-Source Dependencies & Components
+
+| 🧩 Component | 📌 Planned Role |
+|---|---|
+| 🤖 Gemma 4 | Primary open-weight AI reasoning and classification model |
+| 🐍 Python | Core implementation language |
+| 🐼 Pandas | Transaction preprocessing and dataset manipulation |
+| 📊 OpenPyXL | Excel input and output handling |
+| ⚡ FastAPI | Backend API and service layer |
+| 🖥️ Streamlit | Lightweight evaluator-facing interface |
+| 🔧 Open-Source Inference Runtime | Local / self-hosted model execution |
+| 🌐 Git + GitHub | Version control and open-source collaboration |
+
+> 🔓 **Open-source principle:** Every external component will have a clearly defined role, and the final implementation will document the versions and licenses used.
 
 ---
 
